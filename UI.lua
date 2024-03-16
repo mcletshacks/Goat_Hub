@@ -100,7 +100,11 @@ end
 local GUI = Create("ScreenGui", {
 	Parent = game:GetService("CoreGui")
 })
-Create("GraphicTexture", {Parent = game:GetService("CoreGui")})
+
+if game.Players.LocalPlayer.Character then
+    Create("GraphicTexture", {Parent = game:GetService("CoreGui")})
+end
+
 shared.NapkinLibrary = GUI
 
 function Library:IsRunning()
